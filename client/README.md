@@ -1,73 +1,16 @@
-# Full-Stack Project Management Tool
+# React + Vite
 
-A comprehensive project management application built with the MERN stack (MongoDB, Express, React, Node.js).
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Features
-- **Project Management**: Create, view, delete projects. Track status and deadlines.
-- **Task Management**: Add tasks to projects, assign users, and update status (Pending -> In Progress -> Done).
-- **Dashboard**: Overview of all active projects.
-- **Board View**: Kanban-style/List view for tasks within a specific project.
+Currently, two official plugins are available:
 
-## Project Structure
-- `/client`: React frontend (Vite + Tailwind CSS).
-- `/server`: Node.js backend (Express + Mongoose).
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Getting Started
+## React Compiler
 
-### Prerequisites
-- Node.js (v14+)
-- MongoDB (Local or Atlas URI)
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-### Backend Setup
-1. Navigate to the server directory:
-   ```bash
-   cd server
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Configure Environment Variables:
-   - Create a `.env` file in the `server` directory.
-   - Add the following variables:
-     ```env
-     MONGODB_URI=your_mongodb_connection_string
-     PORT=5000
-     ```
-4. Start the server:
-   ```bash
-   npm run dev
-   ```
-   Server will run on `http://localhost:5000`.
+## Expanding the ESLint configuration
 
-### Frontend Setup
-1. Navigate to the client directory:
-   ```bash
-   cd client
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
-   App will run on `http://localhost:5173`.
-
-## Deployment Guide
-
-### Frontend (Netlify/Vercel)
-- **Build Command**: `npm run build`
-- **Publish Directory**: `dist`
-- Ensure you set up redirects for SPA if using Netlify (create a `_redirects` file with content `/* /index.html 200`).
-
-### Backend (Render/Heroku)
-- **Build Command**: `npm install`
-- **Start Command**: `node index.js`
-- **Environment Variables**: Set `MONGODB_URI` in their dashboard.
-
-## Tech Stack
-- **Frontend**: React, Vite, Tailwind CSS, Axios, React Router, Lucide React.
-- **Backend**: Node.js, Express, Mongoose, CORS, Dotenv.
-- **Database**: MongoDB.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
